@@ -124,8 +124,8 @@ type ADMIN struct {
 	gorm.Model
 	Admin_Name     string
 	Admin_Email    string `gorm:"uniqueIndex"`
-	Admin_Password string  `valid:"minstringlength(8)"`
-	Admin_Tel      string  `valid:"matches(^\\d{10}$)"`
+	Admin_Password string `valid:"minstringlength(8)"`
+	Admin_Tel      string `valid:"matches(^\\d{10}$)"`
 	Admin_Address  string `gorm:"uniqueIndex" valid:"minstringlength(20)"`
 
 	PrefixID   *uint
